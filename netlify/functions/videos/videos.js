@@ -13,6 +13,12 @@ export const handler = async (event) => {
     }
   };
 
+  const headers = {
+    "Access-Control-Allow-Origin": "*", // Set the appropriate origin here
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+    "Access-Control-Allow-Headers": "Content-Type"
+  };
+
   const TMDB_API = `https://api.themoviedb.org/3/movie/${id}?language=en-US&append_to_response=videos`;
 
   const response = await fetch(TMDB_API, options);
@@ -21,6 +27,7 @@ export const handler = async (event) => {
 
   return {
     statusCode: 200,
+    headers,
     body: JSON.stringify(data)
   };
 };
