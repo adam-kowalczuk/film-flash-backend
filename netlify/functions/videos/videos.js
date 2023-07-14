@@ -2,7 +2,7 @@
 import fetch from "node-fetch";
 
 export const handler = async (event) => {
-  const movieId = JSON.parse(event.body);
+  const { movieId } = JSON.parse(event.body);
 
   const API_KEY = process.env.API_KEY;
 
@@ -10,7 +10,10 @@ export const handler = async (event) => {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${API_KEY}`
+      Authorization: `Bearer ${API_KEY}`,
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE"
     }
   };
 
