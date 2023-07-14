@@ -1,15 +1,17 @@
 // for a full working demo of Netlify Identity + Functions, see https://netlify-gotrue-in-react.netlify.com/
-
 const fetch = require("node-fetch");
 
-const handler = async () => {
+export const handler = async () => {
   const API_KEY = process.env.API_KEY;
 
   const options = {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: API_KEY
+      Authorization: API_KEY,
+      "Access-Control-Allow-Origin": "*", // Set the appropriate origin here
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization" // Add any additional headers required
     }
   };
 
@@ -28,5 +30,3 @@ const handler = async () => {
     body: JSON.stringify({ data })
   };
 };
-
-module.exports = { handler };
