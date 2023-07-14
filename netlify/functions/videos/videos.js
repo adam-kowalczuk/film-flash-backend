@@ -16,6 +16,7 @@ export const handler = async (event) => {
   const TMDB_API = `https://api.themoviedb.org/3/movie/${id}?language=en-US&append_to_response=videos`;
 
   const response = await fetch(TMDB_API, options);
+  console.log("API Response: ", response);
   const data = await response.json();
 
   return {
