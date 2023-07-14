@@ -1,7 +1,7 @@
 // for a full working demo of Netlify Identity + Functions, see https://netlify-gotrue-in-react.netlify.com/
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 
-const handler = async () => {
+export const handler = async () => {
   const API_KEY = process.env.API_KEY;
 
   const options = {
@@ -27,5 +27,3 @@ const handler = async () => {
     body: JSON.stringify({ data })
   };
 };
-
-modules.export = { handler };
