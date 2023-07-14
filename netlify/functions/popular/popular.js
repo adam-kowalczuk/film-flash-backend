@@ -12,6 +12,12 @@ export const handler = async () => {
     }
   };
 
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE"
+  };
+
   const TMDB_API =
     "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
 
@@ -21,9 +27,7 @@ export const handler = async () => {
 
   return {
     statusCode: 200,
-    headers: {
-      "Content-Type": "application/json"
-    },
+    headers,
     body: JSON.stringify({ data })
   };
 };
