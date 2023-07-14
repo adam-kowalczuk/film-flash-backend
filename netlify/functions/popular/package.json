@@ -13,6 +13,7 @@
     "identity",
     "authentication"
   ],
+  "type": "module",
   "author": "Netlify",
   "license": "MIT",
   "dependencies": {
