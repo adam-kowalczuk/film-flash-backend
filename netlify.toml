@@ -27,4 +27,10 @@
     Access-Control-Allow-Headers = "Authorization" # Add any additional headers if required
     Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
 
+[[headers]]
+  for = "/.netlify/functions/videos" # Path to your serverless function
+  [headers.values]
+    Access-Control-Allow-Origin = "*" # Change this to the appropriate origin if necessary
+    Access-Control-Allow-Headers = "Authorization" # Add any additional headers if required
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
 
