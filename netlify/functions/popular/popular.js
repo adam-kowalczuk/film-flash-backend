@@ -1,4 +1,3 @@
-// for a full working demo of Netlify Identity + Functions, see https://netlify-gotrue-in-react.netlify.com/
 import fetch from "node-fetch";
 
 export const handler = async () => {
