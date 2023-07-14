@@ -2,7 +2,7 @@
 import fetch from "node-fetch";
 
 export const handler = async (event) => {
-  const { id } = event.queryStringParameters?.id;
+  const { id } = event.queryStringParameters;
 
   const API_KEY = process.env.API_KEY;
 
