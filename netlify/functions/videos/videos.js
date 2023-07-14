@@ -2,7 +2,7 @@
 import fetch from "node-fetch";
 
 export const handler = async (event) => {
-  const movieId = JSON.parse(event.queryStringParameters);
+  const movieId = JSON.parse(event.body);
 
   const API_KEY = process.env.API_KEY;
 
