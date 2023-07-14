@@ -2,7 +2,7 @@
 import fetch from "node-fetch";
 
 export const handler = async (event) => {
-  const { movieId } = event.queryStringParameters?.id;
+  const { id } = event.queryStringParameters?.id;
 
   const API_KEY = process.env.API_KEY;
 
@@ -24,7 +24,7 @@ export const handler = async (event) => {
     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE"
   };
 
-  const TMDB_API = `https://api.themoviedb.org/3/movie/${movieId}?language=en-US&append_to_response=videos`;
+  const TMDB_API = `https://api.themoviedb.org/3/movie/${id}?language=en-US&append_to_response=videos`;
 
   const response = await fetch(TMDB_API, options);
   console.log("Response: ", response);
