@@ -27,7 +27,4 @@
     Access-Control-Allow-Headers = "Authorization" # Add any additional headers if required
     Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
 
-[[redirects]]
-  from = "/.netlify/functions/*"
-  to = "/.netlify/functions/:splat"
-  headers = { Access-Control-Allow-Origin = "*", Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS" }
+

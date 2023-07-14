@@ -8,7 +8,7 @@ export const handler = async () => {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: API_KEY
+      Authorization: `Bearer ${API_KEY}`
     }
   };
 
