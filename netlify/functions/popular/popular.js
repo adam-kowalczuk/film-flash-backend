@@ -18,7 +18,7 @@ export const handler = async () => {
   };
 
   const TMDB_API =
-    "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
+    "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
 
   const response = await fetch(TMDB_API, options);
   console.log("Response: ", response);
